@@ -2,7 +2,6 @@ const pages = document.querySelectorAll('.page');
 let currentPage = 0;
 
 document.addEventListener('click', function(e) {
-    // Biar tombol YES tidak memicu perpindahan halaman
     if (e.target.id === 'btnYes') return;
 
     if (currentPage < pages.length - 1) {
