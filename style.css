@@ -1,12 +1,14 @@
-body { font-family: 'Poppins', sans-serif; text-align: center; background: #fff0f5; padding-top: 50px; }
-.page { display: none; }
-.active { display: block; animation: fadeIn 1s; }
+body { font-family: 'Poppins', sans-serif; text-align: center; background: #121212; color: #fff; padding: 20px; }
+.page { display: none; margin-top: 50px; }
+.active { display: block; animation: fadeIn 1.2s; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-h1, h2, h3 { font-family: 'Dancing Script', cursive; color: #ff69b4; }
-.flower-img { width: 200px; margin: 30px 0; display: block; margin-left: auto; margin-right: auto; }
-.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; }
-.gallery img { width: 100%; max-width: 180px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.title { font-family: 'Dancing Script', cursive; color: #ff99cc; font-size: 2.5rem; margin-bottom: 20px; }
+.flower-img { width: 250px; margin: 20px auto; display: block; filter: drop-shadow(0 0 10px #ff99cc); }
 
-.next-btn { padding: 10px 30px; font-size: 1rem; background: #ff69b4; color: white; border: none; border-radius: 20px; cursor: pointer; margin-top: 20px; }
-#typing-text { font-size: 1.3rem; padding: 20px; min-height: 150px; color: #555; }
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 600px; margin: 20px auto; }
+.gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 20px; border: 3px solid #ff99cc; }
+
+.next-btn { padding: 12px 40px; font-size: 1.1rem; background: #ff99cc; color: #000; border: none; border-radius: 25px; cursor: pointer; font-weight: bold; margin-top: 30px; }
+#typing-text { font-size: 1.4rem; padding: 40px; line-height: 1.6; color: #ff99cc; max-width: 80%; margin: 0 auto; min-height: 200px; }
+#btnYes { padding: 20px 60px; font-size: 2rem; background: #ff99cc; border: none; border-radius: 50px; cursor: pointer; }
