@@ -14,13 +14,15 @@ const text = "With my beautiful girl and my favorite idol, life feels truly comp
 function typeText() {
     let i = 0;
     const element = document.getElementById("typing-text");
-    element.innerHTML = "";
+    element.innerHTML = ""; 
+    // Hapus white-space agar bisa turun ke bawah
+    element.style.whiteSpace = "normal"; 
     
     function typing() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
             i++;
-            setTimeout(typing, 50); // Kecepatan ketikan
+            setTimeout(typing, 50);
         }
     }
     typing();
