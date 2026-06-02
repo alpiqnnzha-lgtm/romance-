@@ -24,6 +24,7 @@ function typeText() {
     isTypingStarted = true;
     let i = 0;
     const element = document.getElementById("typing-text");
+    if (!element) return; // Keamanan tambahan
     element.innerHTML = ""; 
     element.style.whiteSpace = "normal"; 
     
@@ -39,7 +40,7 @@ function typeText() {
 
 // Fungsi Kembang Api
 function triggerFireworks() {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 30; i++) { // Dibuat sedikit lebih banyak biar lebih meriah
         const f = document.createElement('div');
         f.className = 'firework';
         f.style.left = Math.random() * 100 + 'vw';
@@ -51,11 +52,16 @@ function triggerFireworks() {
 }
 
 // Event Listener untuk tombol YES
-document.getElementById('btnYes').addEventListener('click', () => {
-    triggerFireworks();
-    setTimeout(() => {
-        alert('Yay! I love you!');
-    }, 500);
+window.addEventListener('DOMContentLoaded', () => {
+    const btnYes = document.getElementById('btnYes');
+    if (btnYes) {
+        btnYes.addEventListener('click', () => {
+            triggerFireworks();
+            setTimeout(() => {
+                alert('Yay! I love you!');
+            }, 500);
+        });
+    }
 });
 
 // Otomatis jalankan halaman 1 saat pertama kali dimuat
