@@ -1,65 +1,27 @@
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: #fff0f5; /* Warna pink lembut */
+    background: #fff0f5;
     margin: 0;
-    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
-.page {
-    display: none;
-    padding-top: 15vh;
-    animation: slideUp 0.8s ease-out forwards;
-}
-
+.page { display: none; width: 100%; animation: slideUp 0.8s ease-out forwards; }
 .active { display: block; }
 
-/* Animasi muncul dari bawah ke atas */
 @keyframes slideUp {
-    from { transform: translateY(30px); opacity: 0; }
+    from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-h1, h2, h3 { 
-    font-family: 'Dancing Script', cursive; 
-    color: #ff69b4; 
-    margin-bottom: 20px;
-}
+h1, h2, h3 { font-family: 'Dancing Script', cursive; color: #ff69b4; margin-bottom: 20px; }
+.flower-img { width: 100px; margin: 20px auto; display: block; }
 
-.flower-img { 
-    width: 100px; 
-    margin: 20px auto; 
-    display: block; 
-}
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; justify-items: center; }
+.gallery img { width: 100px; height: 100px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 
-.gallery { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 15px; 
-    padding: 20px;
-    justify-items: center;
-}
-
-.gallery img { 
-    width: 80%; 
-    border-radius: 15px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-}
-
-#typing-text { 
-    font-size: 1.1rem; 
-    color: #555; 
-    padding: 20px;
-}
-
-button { 
-    padding: 12px 40px; 
-    font-size: 1.2rem; 
-    background-color: #ff69b4; 
-    color: white; 
-    border: none; 
-    border-radius: 25px; 
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-}
+button { padding: 15px 40px; font-size: 1.2rem; background-color: #ff69b4; color: white; border: none; border-radius: 25px; cursor: pointer; font-family: 'Dancing Script', cursive; }
