@@ -17,13 +17,16 @@ body {
 .particles {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 0; 
+    z-index: 0;
     pointer-events: none;
+    /* Kita buat lebih banyak titik dengan ukuran berbeda */
     background-image: 
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
-    background-size: 550px 550px, 350px 350px;
-    animation: snow 15s linear infinite;
+        radial-gradient(circle, #ff99cc 1px, transparent 1px),
+        radial-gradient(circle, #ffffff 1px, transparent 1px),
+        radial-gradient(circle, #ffccff 2px, transparent 2px);
+    background-size: 150px 150px, 250px 250px, 400px 400px;
+    animation: snow 20s linear infinite;
+    opacity: 0.5; /* Dibuat sedikit transparan supaya estetik */
 }
 
 @keyframes snow {
