@@ -8,9 +8,10 @@ function nextPage() {
     if(currentPage === 1) typeText();
 }
 
-// Long English text
-const text = "Since the day I met you, my life has been filled with so much color and joy. You are the puzzle piece that makes my heart feel complete. I love the way we laugh together, the way we share our dreams, and simply how you make every moment feel special. Thank you for being you, and for choosing to be by my side.";
+// Ganti bagian const text dengan ini:
+const text = "Meeting you changed my whole world completely. You are the puzzle piece that makes me feel whole. I truly treasure every single moment we have together.";
 
+// Fungsi ketik tetap sama:
 function typeText() {
     let i = 0;
     const element = document.getElementById("typing-text");
@@ -19,7 +20,7 @@ function typeText() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
             i++;
-            setTimeout(typing, 40);
+            setTimeout(typing, 50);
         }
     }
     typing();
