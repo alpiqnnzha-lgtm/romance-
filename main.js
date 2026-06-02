@@ -1,5 +1,6 @@
 const pages = document.querySelectorAll('.page');
 const text = "With my beautiful girl and my bini, life feels truly complete. They both bring so much happiness and inspiration to my days.";
+let isTypingStarted = false; 
 
 function goToPage(pageNumber) {
     // 1. Sembunyikan semua halaman
@@ -7,17 +8,20 @@ function goToPage(pageNumber) {
         page.classList.remove('active');
     });
     
-    // 2. Tampilkan halaman tujuan (index array dimulai dari 0, jadi pageNumber - 1)
+    // 2. Tampilkan halaman tujuan
     const targetPage = pages[pageNumber - 1];
-    targetPage.classList.add('active');
+    if (targetPage) {
+        targetPage.classList.add('active');
+    }
     
-    // 3. Trigger efek ketik jika pindah ke halaman 2
-    if (pageNumber === 2) {
+    // 3. Trigger efek ketik hanya jika pindah ke halaman 2 dan belum pernah jalan
+    if (pageNumber === 2 && !isTypingStarted) {
         typeText();
     }
 }
 
 function typeText() {
+    isTypingStarted = true;
     let i = 0;
     const element = document.getElementById("typing-text");
     element.innerHTML = ""; 
@@ -32,3 +36,29 @@ function typeText() {
     }
     typing();
 }
+
+// Fungsi Kembang Api
+function triggerFireworks() {
+    for (let i = 0; i < 20; i++) {
+        const f = document.createElement('div');
+        f.className = 'firework';
+        f.style.left = Math.random() * 100 + 'vw';
+        f.style.top = Math.random() * 100 + 'vh';
+        f.style.backgroundColor = ['#ff99cc', '#ffffff', '#ffccff'][Math.floor(Math.random() * 3)];
+        document.body.appendChild(f);
+        setTimeout(() => f.remove(), 1000);
+    }
+}
+
+// Event Listener untuk tombol YES
+document.getElementById('btnYes').addEventListener('click', () => {
+    triggerFireworks();
+    setTimeout(() => {
+        alert('Yay! I love you!');
+    }, 500);
+});
+
+// Otomatis jalankan halaman 1 saat pertama kali dimuat
+window.onload = () => {
+    goToPage(1);
+};
