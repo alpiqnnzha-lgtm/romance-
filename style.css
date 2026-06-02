@@ -27,8 +27,9 @@ body {
 }
 
 @keyframes snow {
+    /* Gunakan nilai yang merupakan kelipatan dari background-size agar mulus */
     0% { background-position: 0px 0px, 0px 0px; }
-    100% { background-position: 500px 1000px, 400px 400px; }
+    100% { background-position: 550px 550px, 350px 350px; }
 }
 
 @keyframes gradientShift {
