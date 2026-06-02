@@ -9,18 +9,18 @@ function nextPage() {
 }
 
 // Ganti bagian const text dengan ini:
-const text = "Meeting you changed my whole world completely. You are the puzzle piece that makes me feel whole. I truly treasure every single moment we have together.";
+const text = "With my beautiful girl and my favorite idol, life feels truly complete. They both bring so much happiness and inspiration to my days.";
 
-// Fungsi ketik tetap sama:
 function typeText() {
     let i = 0;
     const element = document.getElementById("typing-text");
     element.innerHTML = "";
+    
     function typing() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
             i++;
-            setTimeout(typing, 50);
+            setTimeout(typing, 50); // Kecepatan ketikan
         }
     }
     typing();
