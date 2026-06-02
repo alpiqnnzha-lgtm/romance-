@@ -2,12 +2,15 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Gift</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div id="page1" class="page active">
-        <h1>Special Gift For You</h1>
+        <h1 class="title">Special Gift For You</h1>
         <img src="images/bunga.png" class="flower-img" alt="bunga">
         <button class="next-btn" onclick="nextPage()">Next</button>
     </div>
@@ -18,7 +21,7 @@
     </div>
 
     <div id="page3" class="page">
-        <h3>Kenangan Kita</h3>
+        <h3 class="title">Our Memories</h3>
         <div class="gallery">
             <img src="images/foto1.jpg">
             <img src="images/foto2.jpg">
@@ -29,9 +32,10 @@
     </div>
 
     <div id="page4" class="page">
-        <h2>Will you be mine?</h2>
+        <h2 class="title">Will you be mine?</h2>
         <button id="btnYes" onclick="alert('Yay! I love you!')">YES</button>
     </div>
+
     <script src="main.js"></script>
 </body>
 </html>
