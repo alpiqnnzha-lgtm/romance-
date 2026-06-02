@@ -1,21 +1,26 @@
 const pages = document.querySelectorAll('.page');
-let currentPage = 0;
-
-function nextPage() {
-    pages[currentPage].classList.remove('active');
-    currentPage++;
-    pages[currentPage].classList.add('active');
-    if(currentPage === 1) typeText();
-}
-
-// Ganti bagian const text dengan ini:
 const text = "With my beautiful girl and my bini, life feels truly complete. They both bring so much happiness and inspiration to my days.";
+
+function goToPage(pageNumber) {
+    // 1. Sembunyikan semua halaman
+    pages.forEach(page => {
+        page.classList.remove('active');
+    });
+    
+    // 2. Tampilkan halaman tujuan (index array dimulai dari 0, jadi pageNumber - 1)
+    const targetPage = pages[pageNumber - 1];
+    targetPage.classList.add('active');
+    
+    // 3. Trigger efek ketik jika pindah ke halaman 2
+    if (pageNumber === 2) {
+        typeText();
+    }
+}
 
 function typeText() {
     let i = 0;
     const element = document.getElementById("typing-text");
     element.innerHTML = ""; 
-    // Hapus white-space agar bisa turun ke bawah
     element.style.whiteSpace = "normal"; 
     
     function typing() {
