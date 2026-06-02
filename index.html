@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Gift</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <section id="page1" class="page active">
+            <h1 class="fade-in">Special Gift For You</h1>
+            <div class="flower">🌸</div>
+            <p>Klik layar untuk lanjut...</p>
+        </section>
+
+        <section id="page2" class="page">
+            <div id="typing-text"></div>
+        </section>
+
+        <section id="page3" class="page">
+            <h3>Pilih Kenangan Kita</h3>
+            <div class="gallery">
+                <img src="images/foto1.jpg" alt="Foto 1" onclick="alert('Momen indah!')">
+                <img src="images/foto2.jpg" alt="Foto 2" onclick="alert('Lucu banget!')">
+                <img src="images/foto3.jpg" alt="Foto 3" onclick="alert('Favorite!')">
+                <img src="images/foto4.jpg" alt="Foto 4" onclick="alert('Love it!')">
+            </div>
+        </section>
+
+        <section id="page4" class="page">
+            <h2>Will you be mine?</h2>
+            <button id="btnYes" onclick="alert('Yay! I love you!')">YES</button>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
