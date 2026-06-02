@@ -8,7 +8,8 @@ function nextPage() {
     if(currentPage === 1) typeText();
 }
 
-const text = "Hai sayang... Terima kasih ya sudah hadir di hidupku. Setiap hari bersamamu adalah anugerah terindah yang pernah aku miliki. Aku berharap kita bisa terus bersama melewati suka dan duka selamanya. Kamu adalah orang yang paling aku sayang.";
+// Long English text
+const text = "Since the day I met you, my life has been filled with so much color and joy. You are the puzzle piece that makes my heart feel complete. I love the way we laugh together, the way we share our dreams, and simply how you make every moment feel special. Thank you for being you, and for choosing to be by my side.";
 
 function typeText() {
     let i = 0;
@@ -18,7 +19,7 @@ function typeText() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
             i++;
-            setTimeout(typing, 50);
+            setTimeout(typing, 40);
         }
     }
     typing();
