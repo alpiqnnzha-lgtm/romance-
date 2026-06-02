@@ -11,12 +11,27 @@ body { font-family: 'Poppins', sans-serif; text-align: center; background: #1212
 
 .next-btn { padding: 12px 40px; font-size: 1.1rem; background: #ff99cc; color: #000; border: none; border-radius: 25px; cursor: pointer; font-weight: bold; margin-top: 30px; }
 #typing-text { 
-    font-size: 1.5rem; /* Ukuran agak gede */
+    font-size: 1rem; 
     padding: 20px; 
-    line-height: 1.8; 
     color: #ff99cc; 
-    max-width: 300px; /* Lebar dibatasi agar teks otomatis terbagi jadi 3 baris */
     margin: 0 auto; 
-    text-align: center; /* Teks akan membentuk pola alami (lebar-sempit-lebar) */
-    font-family: 'Dancing Script', cursive; /* Biar lebih cantik */
+    text-align: left; 
+    /* Memaksa teks satu baris memanjang ke samping */
+    white-space: nowrap; 
+    overflow: hidden; 
+    display: inline-block; 
+    border-right: 2px solid #ff99cc; /* Efek garis kedip seperti kursor */
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink { from, to { border-color: transparent } 50% { border-color: #ff99cc } }
+
+.gallery img { 
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #ff99cc;
+    cursor: pointer; 
+    transition: transform 0.3s; 
 }
