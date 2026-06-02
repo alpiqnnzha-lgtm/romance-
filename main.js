@@ -9,7 +9,7 @@ function nextPage() {
 }
 
 // Ganti bagian const text dengan ini:
-const text = "With my beautiful girl and my favorite idol, life feels truly complete. They both bring so much happiness and inspiration to my days.";
+const text = "With my beautiful girl and my bini, life feels truly complete. They both bring so much happiness and inspiration to my days.";
 
 function typeText() {
     let i = 0;
