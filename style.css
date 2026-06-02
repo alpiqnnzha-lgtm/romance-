@@ -1,4 +1,4 @@
-/* General Layout */
+    /* General Layout */
 body { 
     font-family: 'Poppins', sans-serif; 
     text-align: center; 
@@ -105,6 +105,15 @@ body {
 /* Animasi Kembang Api */
 .firework {
     position: fixed;
-    width: 10px;
-    height:
-        
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(15); opacity: 0; }
+}
