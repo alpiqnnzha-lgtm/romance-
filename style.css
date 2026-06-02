@@ -10,27 +10,25 @@ body {
     color: #fff; 
     min-height: 100vh;
     position: relative;
-    overflow: hidden; /* Mencegah munculnya scrollbar */
+    overflow: hidden; 
 }
 
-/* Layer partikel yang terpisah agar pasti muncul */
+/* Layer partikel */
 .particles {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: 0;
     pointer-events: none;
-    /* Kita buat lebih banyak titik dengan ukuran berbeda */
     background-image: 
         radial-gradient(circle, #ff99cc 1px, transparent 1px),
         radial-gradient(circle, #ffffff 1px, transparent 1px),
         radial-gradient(circle, #ffccff 2px, transparent 2px);
     background-size: 150px 150px, 250px 250px, 400px 400px;
     animation: snow 20s linear infinite;
-    opacity: 0.5; /* Dibuat sedikit transparan supaya estetik */
+    opacity: 0.5;
 }
 
 @keyframes snow {
-    /* Gunakan nilai yang merupakan kelipatan dari background-size agar mulus */
     0% { background-position: 0px 0px, 0px 0px; }
     100% { background-position: 550px 550px, 350px 350px; }
 }
@@ -41,18 +39,50 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Page Container (harus di atas partikel) */
+/* Page Container */
 .page { display: none; margin-top: 50px; position: relative; z-index: 1; }
 .active { display: block; animation: fadeIn 1.2s; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* Sisanya tetap sama seperti yang kamu kirim tadi */
+/* Typography & Elements */
 .title { font-family: 'Dancing Script', cursive; color: #ff99cc; font-size: 2.5rem; margin-bottom: 20px; }
 .flower-img { width: 250px; margin: 20px auto; display: block; filter: drop-shadow(0 0 10px #ff99cc); }
 #typing-text { font-size: 1.3rem; padding: 20px; color: #ff99cc; margin: 20px auto; text-align: center; max-width: 300px; word-wrap: break-word; line-height: 1.5; font-family: 'Dancing Script', cursive; }
 .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 400px; margin: 20px auto; }
 .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 15px; border: 3px solid #ff99cc; cursor: pointer; transition: transform 0.3s; }
 .gallery img:hover { transform: scale(1.05); }
-.next-btn { display: block; margin: 30px auto; padding: 12px 40px; font-size: 1.1rem; background: #ff99cc; color: #000; border: none; border-radius: 25px; cursor: pointer; font-weight: bold; }
+
+/* Navigasi Ikon (Hati) */
+.nav-container {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+.nav-btn {
+    width: 50px;
+    height: 50px;
+    background-image: url('images/nav-icons.png'); 
+    background-size: 200px 50px;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ff99cc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-1 { background-position: 0px 0px; }
+.btn-2 { background-position: -50px 0px; }
+.btn-3 { background-position: -100px 0px; }
+.btn-4 { background-position: -150px 0px; }
+
+.nav-btn:hover { transform: scale(1.1); box-shadow: 0 0 10px #ff99cc; }
+
+/* Tombol YES */
 #btnYes { padding: 15px 40px; font-size: 1.5rem; background: #ff99cc; border: none; border-radius: 30px; cursor: pointer; margin-top: 30px; color: #000; transition: transform 0.2s; }
 #btnYes:hover { transform: scale(1.1); }
