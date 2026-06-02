@@ -2,40 +2,36 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Gift</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div id="page1" class="page active">
         <h1>Special Gift For You</h1>
         <img src="images/bunga.png" class="flower-img" alt="bunga">
-        <p>Klik di mana saja untuk lanjut...</p>
+        <button class="next-btn" onclick="nextPage()">Next</button>
     </div>
 
     <div id="page2" class="page">
-        <h2>Hai sayang...</h2>
-        <p>Terima kasih ya sudah ada di hidupku.</p>
-        <p>Kamu sangat berarti buat aku.</p>
+        <div id="typing-text"></div>
+        <button class="next-btn" onclick="nextPage()">Next</button>
     </div>
 
     <div id="page3" class="page">
         <h3>Kenangan Kita</h3>
         <div class="gallery">
-            <img src="images/foto1.jpg" alt="Foto 1">
-            <img src="images/foto2.jpg" alt="Foto 2">
-            <img src="images/foto3.jpg" alt="Foto 3">
-            <img src="images/foto4.jpg" alt="Foto 4">
+            <img src="images/foto1.jpg">
+            <img src="images/foto2.jpg">
+            <img src="images/foto3.jpg">
+            <img src="images/foto4.jpg">
         </div>
+        <button class="next-btn" onclick="nextPage()">Next</button>
     </div>
 
     <div id="page4" class="page">
         <h2>Will you be mine?</h2>
         <button id="btnYes" onclick="alert('Yay! I love you!')">YES</button>
     </div>
-
     <script src="main.js"></script>
 </body>
 </html>
