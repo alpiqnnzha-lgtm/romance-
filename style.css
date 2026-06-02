@@ -55,13 +55,18 @@ body {
 /* Navigasi Google Icons (Sudah bersih & rapi) */
 .nav-container {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 25px; /* Sedikit lebih naik agar tidak terlalu mepet bawah */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     z-index: 999;
+    /* Tambahkan ini biar aman dari elemen lain */
+    width: fit-content; 
+    padding: 10px 20px;
 }
 
 .nav-btn {
