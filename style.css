@@ -4,13 +4,33 @@ body {
     text-align: center; 
     margin: 0;
     padding: 20px;
-    /* Kita buat gradient-nya lebih kontras supaya gerakan lebih terasa */
+    /* Background Gradasi */
     background: linear-gradient(-45deg, #0f0f0f, #331528, #1a0b14, #0f0f0f);
     background-size: 400% 400%;
-    /* Animasi dibuat lebih cepat (dari 10s jadi 8s) supaya gerakannya kelihatan jelas */
-    animation: gradientShift 8s ease infinite;
+    animation: gradientShift 10s ease infinite;
     color: #fff; 
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efek Partikel Debu Berterbangan */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+    background-size: 550px 550px, 350px 350px;
+    animation: snow 15s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px; }
+    100% { background-position: 500px 1000px, 400px 400px; }
 }
 
 @keyframes gradientShift {
@@ -19,7 +39,8 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-.page { display: none; margin-top: 50px; }
+/* Page Container */
+.page { display: none; margin-top: 50px; position: relative; z-index: 1; }
 .active { display: block; animation: fadeIn 1.2s; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
