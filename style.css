@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif; 
     text-align: center; 
     margin: 0;
-    padding: 20px;
+    padding: 0; /* Padding 0 agar navigasi tidak melenceng */
     background: linear-gradient(-45deg, #0f0f0f, #331528, #1a0b14, #0f0f0f);
     background-size: 400% 400%;
     animation: gradientShift 10s ease infinite;
@@ -40,7 +40,7 @@ body {
 }
 
 /* Page Container */
-.page { display: none; margin-top: 50px; position: relative; z-index: 1; }
+.page { display: none; margin-top: 50px; padding: 20px; position: relative; z-index: 1; }
 .active { display: block; animation: fadeIn 1.2s; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
@@ -52,18 +52,16 @@ body {
 .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 15px; border: 3px solid #ff99cc; cursor: pointer; transition: transform 0.3s; }
 .gallery img:hover { transform: scale(1.05); }
 
-/* Navigasi Google Icons (Sudah bersih & rapi) */
-/* Navigasi Google Icons - Updated */
+/* Navigasi */
 .nav-container {
     position: fixed;
     bottom: 20px;
-    width: 100%; /* Ambil lebar penuh layar */
+    width: 100%;
     display: flex;
-    justify-content: center; /* Mengatur posisi ikon ke tengah */
+    justify-content: center;
     align-items: center;
     gap: 15px;
     z-index: 999;
-    /* Hilangkan margin atau left/right yang aneh */
     left: 0;
 }
 
@@ -77,7 +75,7 @@ body {
     border: 2px solid #ff99cc;
     border-radius: 50%;
     cursor: pointer;
-    color: #ff99cc; /* Warna ikon */
+    color: #ff99cc;
     transition: 0.3s;
     outline: none;
 }
@@ -89,6 +87,24 @@ body {
     box-shadow: 0 0 15px #ff99cc;
 }
 
-/* Tombol YES */
-#btnYes { padding: 15px 40px; font-size: 1.5rem; background: #ff99cc; border: none; border-radius: 30px; cursor: pointer; margin-top: 30px; color: #000; transition: transform 0.2s; }
-#btnYes:hover { transform: scale(1.1); box-shadow: 0 0 15px #ff99cc; }
+/* Tombol YES yang lebih proporsional */
+#btnYes { 
+    padding: 10px 30px; 
+    font-size: 1.2rem; 
+    background: #ff99cc; 
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    margin-top: 30px; 
+    color: #000; 
+    transition: transform 0.2s; 
+    font-weight: bold;
+}
+#btnYes:hover { transform: scale(1.05); box-shadow: 0 0 15px #ff99cc; }
+
+/* Animasi Kembang Api */
+.firework {
+    position: fixed;
+    width: 10px;
+    height:
+        
