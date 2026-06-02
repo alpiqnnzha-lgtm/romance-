@@ -4,10 +4,11 @@ body {
     text-align: center; 
     margin: 0;
     padding: 20px;
-    /* Background gradasi bergerak */
-    background: linear-gradient(45deg, #121212, #2a1a25, #121212);
+    /* Kita buat gradient-nya lebih kontras supaya gerakan lebih terasa */
+    background: linear-gradient(-45deg, #0f0f0f, #331528, #1a0b14, #0f0f0f);
     background-size: 400% 400%;
-    animation: gradientShift 10s ease infinite;
+    /* Animasi dibuat lebih cepat (dari 10s jadi 8s) supaya gerakannya kelihatan jelas */
+    animation: gradientShift 8s ease infinite;
     color: #fff; 
     min-height: 100vh;
 }
