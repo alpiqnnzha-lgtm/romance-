@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const pages = document.querySelectorAll('.page');
-    const text = "With my beautiful girl and my bini, life feels truly complete. They both bring so much happiness and inspiration to my days.";
+    
+    // Teks baru yang lebih santai & elegan
+    const text = "Life keeps us busy, and I'm really enjoying my own grind right now. " +
+                 "Just wanted to share a little something since you liked this song. " +
+                 "Staying cool, keep doing your thing, and maybe appreciate the good times we had. " +
+                 "Oh, and meet my bini—she’s definitely keeping me sane through all this busy-ness! 😋";
+                 
     let isTypingStarted = false;
 
     // --- LOGIKA MUSIK & LIRIK ---
@@ -8,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const musicBtn = document.getElementById('btnMusic');
     const lyricsDisplay = document.getElementById('lyrics-display');
     
-    // Sesuaikan waktu (detik) dan teks lirikmu di sini
     const lyrics = [
         { time: 0, text: "It's a beautiful night..." },
         { time: 4, text: "We're looking for something dumb to do" },
@@ -18,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { time: 21, text: "Who cares baby, I think I wanna marry you" }
     ];
 
-    // Fungsi Play/Pause Musik
     if (musicBtn && song) {
         musicBtn.addEventListener('click', () => {
             if (song.paused) {
@@ -31,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Sinkronisasi Lirik
     if (song) {
         song.addEventListener('timeupdate', () => {
             const current = song.currentTime;
@@ -65,7 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (i < text.length) {
                 element.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typing, 50);
+                // Kecepatan mengetik sedikit lebih cepat agar teks panjang tidak terlalu lama
+                setTimeout(typing, 30); 
             }
         }
         typing();
@@ -84,18 +88,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Event Listener Tombol YES
     const btnYes = document.getElementById('btnYes');
     if (btnYes) {
         btnYes.addEventListener('click', () => {
             triggerFireworks();
             setTimeout(() => {
-                alert('Yay! I love you!');
+                alert('Yay! Glad you liked it!');
             }, 500);
         });
     }
 
-    // Jalankan default
     window.goToPage(1);
 });
-                                
