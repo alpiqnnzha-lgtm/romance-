@@ -1,9 +1,9 @@
-    /* General Layout */
+/* General Layout */
 body { 
     font-family: 'Poppins', sans-serif; 
     text-align: center; 
     margin: 0;
-    padding: 0; /* Padding 0 agar navigasi tidak melenceng */
+    padding: 0;
     background: linear-gradient(-45deg, #0f0f0f, #331528, #1a0b14, #0f0f0f);
     background-size: 400% 400%;
     animation: gradientShift 10s ease infinite;
@@ -87,7 +87,35 @@ body {
     box-shadow: 0 0 15px #ff99cc;
 }
 
-/* Tombol YES yang lebih proporsional */
+/* Tombol Musik Melayang */
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ff99cc;
+    border-radius: 50%;
+    color: #ff99cc;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Lirik */
+.lyrics-style {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #ffccff;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #ff99cc;
+    transition: opacity 0.5s;
+    min-height: 50px;
+}
+
+/* Tombol YES */
 #btnYes { 
     padding: 10px 30px; 
     font-size: 1.2rem; 
@@ -116,4 +144,4 @@ body {
 @keyframes explode {
     0% { transform: scale(1); opacity: 1; }
     100% { transform: scale(15); opacity: 0; }
-}
+        }
