@@ -10,6 +10,10 @@
 </head>
 <body>
 
+    <button id="btnMusic" class="music-btn">
+        <span class="material-icons">music_note</span>
+    </button>
+
     <div class="particles"></div>
 
     <div id="nav-container" class="nav-container">
@@ -26,6 +30,7 @@
 
     <div id="page2" class="page">
         <div id="typing-text"></div>
+        <div id="lyrics-display" class="lyrics-style"></div>
     </div>
 
     <div id="page3" class="page">
@@ -42,6 +47,11 @@
         <h2 class="title">Will you be mine?</h2>
         <button id="btnYes">YES</button>
     </div>
+
+    <audio id="mySong" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung pemutar musik.
+    </audio>
 
     <script src="main.js"></script>
 </body>
