@@ -3,7 +3,47 @@ document.addEventListener("DOMContentLoaded", () => {
     const text = "With my beautiful girl and my bini, life feels truly complete. They both bring so much happiness and inspiration to my days.";
     let isTypingStarted = false;
 
-    // Fungsi Navigasi
+    // --- LOGIKA MUSIK & LIRIK ---
+    const song = document.getElementById('mySong');
+    const musicBtn = document.getElementById('btnMusic');
+    const lyricsDisplay = document.getElementById('lyrics-display');
+    
+    // Sesuaikan waktu (detik) dan teks lirikmu di sini
+    const lyrics = [
+        { time: 0, text: "It's a beautiful night..." },
+        { time: 4, text: "We're looking for something dumb to do" },
+        { time: 8, text: "Hey baby, I think I wanna marry you" },
+        { time: 13, text: "Is it the look in your eyes?" },
+        { time: 17, text: "Or is it this dancing juice?" },
+        { time: 21, text: "Who cares baby, I think I wanna marry you" }
+    ];
+
+    // Fungsi Play/Pause Musik
+    if (musicBtn && song) {
+        musicBtn.addEventListener('click', () => {
+            if (song.paused) {
+                song.play();
+                musicBtn.innerHTML = '<span class="material-icons">pause</span>';
+            } else {
+                song.pause();
+                musicBtn.innerHTML = '<span class="material-icons">music_note</span>';
+            }
+        });
+    }
+
+    // Sinkronisasi Lirik
+    if (song) {
+        song.addEventListener('timeupdate', () => {
+            const current = song.currentTime;
+            const activeLyric = lyrics.find(l => Math.abs(current - l.time) < 0.5);
+            if (activeLyric && lyricsDisplay) {
+                lyricsDisplay.innerText = activeLyric.text;
+                lyricsDisplay.style.opacity = 1;
+            }
+        });
+    }
+
+    // --- FUNGSI NAVIGASI ---
     window.goToPage = function(pageNumber) {
         pages.forEach(page => page.classList.remove('active'));
         const targetPage = pages[pageNumber - 1];
@@ -31,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         typing();
     }
 
-    // Fungsi Kembang Api
+    // --- FUNGSI KEMBANG API ---
     function triggerFireworks() {
         for (let i = 0; i < 30; i++) {
             const f = document.createElement('div');
@@ -58,3 +98,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Jalankan default
     window.goToPage(1);
 });
+                                
