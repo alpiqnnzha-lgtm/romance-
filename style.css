@@ -47,7 +47,21 @@ body {
 /* Typography & Elements */
 .title { font-family: 'Dancing Script', cursive; color: #ff99cc; font-size: 2.5rem; margin-bottom: 20px; }
 .flower-img { width: 250px; margin: 20px auto; display: block; filter: drop-shadow(0 0 10px #ff99cc); }
-#typing-text { font-size: 1.3rem; padding: 20px; color: #ff99cc; margin: 20px auto; text-align: center; max-width: 300px; word-wrap: break-word; line-height: 1.5; font-family: 'Dancing Script', cursive; }
+
+/* Typing Text - Diberi ruang bawah lebih besar */
+#typing-text { 
+    font-size: 1.3rem; 
+    padding: 20px; 
+    color: #ff99cc; 
+    margin: 20px auto; 
+    text-align: center; 
+    max-width: 350px; /* Sedikit dilebarkan agar teks panjang lebih rapi */
+    word-wrap: break-word; 
+    line-height: 1.6; 
+    font-family: 'Dancing Script', cursive; 
+    margin-bottom: 80px; /* Memberi jarak ke lirik di bawahnya */
+}
+
 .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 400px; margin: 20px auto; }
 .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 15px; border: 3px solid #ff99cc; cursor: pointer; transition: transform 0.3s; }
 .gallery img:hover { transform: scale(1.05); }
@@ -104,12 +118,12 @@ body {
     justify-content: center;
 }
 
-/* Lirik */
+/* Lirik - Posisi lebih bawah */
 .lyrics-style {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     color: #ffccff;
-    margin-top: 20px;
+    margin-top: 60px; /* Jarak dari teks di atasnya */
     text-shadow: 0 0 10px #ff99cc;
     transition: opacity 0.5s;
     min-height: 50px;
@@ -144,4 +158,4 @@ body {
 @keyframes explode {
     0% { transform: scale(1); opacity: 1; }
     100% { transform: scale(15); opacity: 0; }
-        }
+    }
